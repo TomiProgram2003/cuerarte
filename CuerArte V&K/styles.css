@@ -1,0 +1,478 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 94%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: linear-gradient(#0008, #000f), url('./images/img1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.header .navBar {
+  width: 80%;
+  max-width: 1200px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #27201dda;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.header .navBar .navMenu {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header .navBar .navMenu .navGroup {
+  width: 280px;
+  height: inherit;
+  display: inherit;
+  justify-content: space-between;
+  align-items: inherit;
+  text-align: justify;
+}
+
+.header .navBar .navMenu .navGroup:first-child {
+  justify-content: space-around;
+}
+
+.header .navBar .navMenu .navGroup .navItem {
+  list-style-type: none;
+}
+
+.header .navBar .navMenu .navGroup .navItem .navLink {
+  position: relative;
+  text-decoration: none;
+  color: #aaa;
+  transition: all .5s;
+}
+
+.header .navBar .navMenu .navGroup .navItem .navLink:hover {
+  color: #eee;
+}
+
+.header .navBar .navMenu .navGroup .navItem .navLink::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  background-color: #aaa;
+  transition: width 0.3s ease-out;
+}
+
+.header .navBar .navMenu .navGroup .navItem .navLink:hover::after {
+  width: 100%;
+}
+
+.header .navBar .navMenu .logo {
+  color: #ad3708ab;
+  text-shadow: 1px 1px 2px #d1d1d1, 3px 3px #000;
+  font-size: 28px;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+.header .banner {
+  width: 70%;
+  max-width: 1080px;
+  height: 50%;
+  max-height: 360px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header .banner .title {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 2px 2px #000a;
+  letter-spacing: 10px;
+  color: #fff;
+}
+
+.header .banner .title span {
+  padding-left: 5px;
+  text-shadow: none;
+  color: #000;
+  background-color: #fff;
+}
+
+.header .banner .phrase {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 56px;
+  font-weight: 800;
+  text-shadow: 3px 3px 2px #000;
+  text-transform: capitalize;
+  letter-spacing: 10px;
+  color: #fff;
+}
+
+.header .banner .buttonCatalog {
+  width: 220px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: #4b3421b9;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px 1px #0008;
+  transition: all .5s;
+}
+
+.header .banner .buttonCatalog:hover {
+  letter-spacing: 2px;
+  box-shadow: 2px 3px 3px 2px #0008;
+}
+
+/* MAIN */
+.main {
+  width: 100%;
+  height: max-content;
+  background-color: green;
+}
+
+.main .exhibition {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#000f, #0003,#000f 90%), url('./images/bg2.png');;
+  background-position: center;
+  background-size: cover;
+}
+
+.main .exhibition .wraper {
+  width: 1200px;
+  height: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-content: space-around;
+  /* background-color: red; */
+}
+
+.main .exhibition .wraper .product {
+  width: 500px;
+  height: 400px;
+  position: relative;
+  top: -100px;
+  background-color: blue;
+  border: 1px solid #000;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.main .exhibition .wraper .product img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main .exhibition .wraper .product .info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 320px;
+  text-align: center;
+  transition: all .5s;
+  /* background-color: #f0fA; */
+  background-color: #3D2E2EAA;
+}
+
+.main .exhibition .wraper .product:hover .info {
+  top: 0;
+  cursor: pointer;
+}
+
+.main .exhibition .wraper .product .info .presentation {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: #3D2E2EC3;
+  /* border-bottom: 1px #050 solid; */
+}
+
+.main .exhibition .wraper .product .info .presentation .title {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 26px;
+  color: #fff;
+}
+
+.main .exhibition .wraper .product .info .presentation .subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.main .exhibition .wraper .product .info .presentation .subtitle span {
+  background-color: #fff;
+  color: #000;
+  padding: 1px 3px;
+}
+
+.main .exhibition .wraper .product .info .features {
+  width: 80%;
+  height: 180px;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: column;
+  margin: 15px auto;
+  /* background-color: #a70a; */
+}
+
+.main .exhibition .wraper .product .info .features .feature {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  font-family: serif;
+  color: #fffa;
+  text-shadow: 1px 1px #000;
+  /* background-color: #000a; */
+}
+
+.main .exhibition .wraper .product .info .features .feature ion-icon {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 28px;
+  filter: drop-shadow(2px 2px 4px #8F817C); /* Aplicar el drop shadow */
+  /* background-color: #fff; */
+}
+
+.main .exhibition .wraper .product .info .features .feature span {
+  /* background-color: #999; */
+}
+
+.main .exhibition .wraper .product .info .price {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #fff;
+  /* background-color: #000a; */
+}
+
+.main .exhibition .wraper .product .info .buttonShowProduct {
+  width: 120px;
+  height: 35px;
+}
+
+.main .exhibition .wraper .product .info .buttonShowProduct:hover {
+  cursor: pointer;
+}
+
+
+.main .littleAbout {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(#3b3329ff, #16130f71), url('./images/bg1.png');
+  background-position: 0 0;
+  background-size: cover;
+  background-color: #ff5100;
+}
+
+
+.main .littleAbout .backgroundTop {
+  width: 100%;
+  height: 460px;
+  position: relative;
+  background: url('./images/img2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.main .littleAbout .backgroundTop::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(#000f 5%, #3b332971 95%, #3b3329ff);
+}
+
+.main .littleAbout .details {
+  width: 80%;
+  max-width: 1400px;
+  height: 2400px;
+  margin: auto;
+  /* background-color: #ff00aa; */
+  background: linear-gradient(to right, #513D2D54, #513D2Dff, #513D2D54) ;
+}
+
+.main .littleAbout .details .container:first-child {
+  margin-top: 0;
+}
+
+.main .littleAbout .details .container {
+  /* visibility: hidden; */
+  width: 100%;
+  height: 760px;
+  position: relative;
+  margin: 10px 0;
+}
+
+.main .littleAbout .details .container .content {
+  width: 700px;
+  height: 650px;
+  position: absolute;
+  left: 120px;
+  top: -100px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.main .littleAbout .details .container:nth-child(even) .content {
+  left: initial;
+  right: 120px;
+}
+
+.main .littleAbout .details .container .content .presentation {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: column;
+  /* background-color: #339a; */
+}
+
+
+.main .littleAbout .details .container .content .presentation .title {
+  width: max-content;
+  position: relative;
+  color: #c59f59;
+  font-size: 36px;
+  margin-bottom: 12px;
+}
+
+.main .littleAbout .details .container .content .presentation .title::before {
+  content: '';
+  width: 90%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #7a7e50aa;
+  border-radius: 50%;
+}
+
+.main .littleAbout .details .container .content .presentation .text {
+  max-width: 80%;
+  align-self: center;
+  font-size: 20px;
+  color: #1a1515e5;
+}
+
+.main .littleAbout .details .container .content .decoration {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: serif;
+  font-size: 80px;
+  font-weight: 800;
+  color: #0007;
+  /* background-color: aqua; */
+}
+
+.main .littleAbout .details .container:nth-child(even) .content .decoration {
+  width: 90%;
+  justify-content: end;
+}
+
+.main .littleAbout .details .container .content > .text {
+  width: 60%;
+  height: 200px;
+  font-size: 18px;
+  color: #1a1515c5;
+  line-height: 1.6em;
+  /* background-color: saddlebrown; */
+} 
+
+.main .littleAbout .details .container:nth-child(even) .content > .text {
+  margin-left: 30%;
+  text-align-last: left;
+}
+
+.main .littleAbout .details .container .content img {
+  width: 380px;
+  height: 420px;
+  position: absolute;
+  top: 300px;
+  left: 410px;
+}
+
+.main .littleAbout .details .container:nth-child(even) .content img {
+  left: initial;
+  right: 420px;
+  transform: translateX(-25%);
+}
+
+.main .bannerCatalog {
+  width: 100%;
+  height: 120vh;
+  background-color: cornflowerblue;
+}
+
+
+/* FOOTER */  
+.footer {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+}
